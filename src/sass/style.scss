@@ -1,0 +1,160 @@
+@import 'var/variables';
+* {
+    font-size: 15px;
+}
+
+h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: .8;
+}
+
+.main {
+    min-height: 100vh;
+    background: $bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__glass {
+        background: white;
+        min-height: 80vh;
+        width: 50%;
+        background: linear-gradient(to right bottom,
+         rgba(255, 255, 255, .7),
+         rgba(255, 255, 255, .3));
+         border-radius: 27px;
+        z-index: 3;
+        backdrop-filter: blur(5px);
+        display: flex;
+    }
+    &__dashboard {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        background: linear-gradient(to right bottom,
+         rgba(255, 255, 255, 1),
+         rgba(255, 255, 255, .5));
+        border-radius: 21px;
+        &-user {
+            img {
+                border-radius: 50%;
+            }
+        }
+        &-links_item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            h2 {
+                margin-left: 10px;
+            }
+        }
+        &_pro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: $bg-color;
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 15px;
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                text-align: center;
+                color: white;
+                &:hover {
+                    text-decoration: underline;
+                }
+                h2 {
+                    text-align: center;
+                }
+            }  
+            img {
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    /* GAMES */
+    &__games {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 25px;
+    }
+    &__cards {
+        &-item {
+            display: flex;
+            max-width: 400px;
+            background: linear-gradient(to right bottom,
+                        rgba(255, 255, 255, 1),
+                        rgba(255, 255, 255, .7));
+            margin-bottom: 30px;
+            padding: 10px 10px 25px 10px;
+            border-radius: 20px;
+            box-shadow: 6px 6px 20px rgba(122, 122, 122, .3);
+            img {
+                border-radius: 15px;
+            }
+        }
+        &-info {
+            margin: 0 10px;
+            .progress {
+                background: $bg-color;
+                width: 100%;
+                height: 25%;
+                border-radius: 20px;
+                position: relative;
+                overflow: hidden;
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(236, 236, 236);
+                    position: absolute;
+                    left: 60%;
+                }
+            }
+        }
+    }
+
+    &__status {
+        margin-bottom: 15px;
+        input {
+            background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, .7),
+            rgba(255, 255, 255, .3));
+            border-radius: 15px;
+            border: 1px solid lightgray;
+            padding: 5px;
+            width: 50%;
+        }
+    }
+}
+
+.circle-bottom, 
+.circle-top {
+    background: white;
+    background: linear-gradient(to right bottom,
+         rgba(255, 255, 255, .8),
+         rgba(255, 255, 255, .3));
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-bottom {
+    bottom: 5%;
+    left: 15%;
+}
+
+.circle-top {
+    top: 5%;
+    right: 15%;
+}
